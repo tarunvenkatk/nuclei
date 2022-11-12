@@ -1,4 +1,5 @@
 FROM golang:1.19.2-alpine as build-env
+WORKDIR /
 RUN apk add build-base
 RUN go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 
